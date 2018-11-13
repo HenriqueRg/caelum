@@ -5,7 +5,9 @@
 	flex: 1;
 	text-align: right;
 }
-
+.mural--linha{
+	display: none;
+}
 .opcoesDaPagina-opcao {
 	font-size: 1em;
 	vertical-align: middle;
