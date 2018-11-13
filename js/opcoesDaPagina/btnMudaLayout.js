@@ -15,3 +15,5 @@ function mudaLayout(){
     mural.classList.toggle('mural--linha')
 }
 btn.addEventListener('click', mudaLayout)
+
+btn.classList.remove('nao-implementado')

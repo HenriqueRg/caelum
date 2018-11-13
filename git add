@@ -1,0 +1,57 @@
+[1mdiff --git a/css/reset.css b/css/reset.css[m
+[1mindex 9e6d61d..ed24ea3 100644[m
+[1m--- a/css/reset.css[m
+[1m+++ b/css/reset.css[m
+[36m@@ -12,3 +12,6 @@[m [mbody {[m
+   outline-style: solid;[m
+   outline-width: 3px;[m
+ }[m
+[32m+[m[32m.nao-implementado {[m
+[32m+[m[32m  display: none!important;[m
+[32m+[m[32m}[m
+[1mdiff --git a/index.html b/index.html[m
+[1mindex 1aecf4e..6d25d71 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -36,14 +36,14 @@[m
+       Ceep[m
+     </h1>[m
+     <div class="opcoesDaPagina">[m
+[31m-      <input type="search" placeholder="busca" id="busca" class="opcoesDaPagina-opcao">[m
+[31m-      <button id="btnMudaLayout" class="opcoesDaPagina-opcao opcoesDaPagina-botao">[m
+[32m+[m[32m      <input type="search" placeholder="busca" id="busca" class="opcoesDaPagina-opcao nao-implementado">[m
+[32m+[m[32m      <button id="btnMudaLayout" class="opcoesDaPagina-opcao opcoesDaPagina-botao nao-implementado">[m
+         Linhas[m
+       </button>[m
+[31m-      <button id="btnAjuda" class="opcoesDaPagina-opcao opcoesDaPagina-botao">[m
+[32m+[m[32m      <button id="btnAjuda" class="opcoesDaPagina-opcao opcoesDaPagina-botao nao-implementado">[m
+         ?[m
+       </button>[m
+[31m-      <button id="btnSync" class="opcoesDaPagina-opcao opcoesDaPagina-botao botaoSync botaoSync--sincronizado">[m
+[32m+[m[32m      <button id="btnSync" class="opcoesDaPagina-opcao opcoesDaPagina-botao botaoSync botaoSync--sincronizado nao-implementado">[m
+         <svg class="botaoSync-icone">[m
+           <use xlink:href="#iconeSincronizar"></use>[m
+         </svg>[m
+[36m@@ -51,7 +51,7 @@[m
+     </div>[m
+   </header>[m
+ [m
+[31m-  <form class="formNovoCartao container">[m
+[32m+[m[32m  <form class="formNovoCartao container nao-implementado">[m
+     <textarea class="formNovoCartao-conteudo" name="formNovoCartao-conteudo" placeholder="Digite aqui"></textarea>[m
+     <input class="formNovoCartao-salvar" type="submit" value="Salvar">[m
+   </form>[m
+[1mdiff --git a/js/opcoesDaPagina/btnMudaLayout.js b/js/opcoesDaPagina/btnMudaLayout.js[m
+[1mindex 33db222..2c9fd6b 100644[m
+[1m--- a/js/opcoesDaPagina/btnMudaLayout.js[m
+[1m+++ b/js/opcoesDaPagina/btnMudaLayout.js[m
+[36m@@ -14,4 +14,6 @@[m [mconst mural = document.querySelector('.mural')[m
+ function mudaLayout(){[m
+     mural.classList.toggle('mural--linha')[m
+ }[m
+[31m-btn.addEventListener('click', mudaLayout)[m
+\ No newline at end of file[m
+[32m+[m[32mbtn.addEventListener('click', mudaLayout)[m
+[32m+[m
+[32m+[m[32mbtn.classList.remove('nao-implementado')[m
+\ No newline at end of file[m
