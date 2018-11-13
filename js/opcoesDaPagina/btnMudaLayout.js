@@ -1,4 +1,5 @@
-const btn = document.querySelector('#btnMudaLayout')
+;(function(){
+    const btn = document.querySelector('#btnMudaLayout')
 
 function mudaTexto (){
     if(btn.textContent === 'Blocos'){
@@ -17,3 +18,4 @@ function mudaLayout(){
 btn.addEventListener('click', mudaLayout)
 
 btn.classList.remove('nao-implementado')
+})()
