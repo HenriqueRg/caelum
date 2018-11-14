@@ -24,6 +24,14 @@
                 cartao.style.backgroundColor = elementoSelecionado.value
             }
         })
+        cartao.addEventListener("focusin",()=> {
+            cartao.classList.add("cartao--focado")
+        })
+        cartao.addEventListener("focusout", ()=> {
+            cartao.classList.remove("cartao--focado")
+        })
+        
+        
     }
     
 })()
